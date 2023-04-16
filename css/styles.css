@@ -1,1 +1,50 @@
 @import url(global.css);
+
+/* Hero section*/
+.main-hero {
+    background: var(--gray-50);
+}
+
+.main-hero .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+h1 {
+    padding-top: 6rem;
+}
+
+.support-text {
+    margin: 1.5rem auto 2.5rem auto;
+    font: var(--font-regular) var(--text-xl) var(--font-family);
+    max-width: 48rem;
+}
+
+.hero-btn-container {
+    display: flex;
+    justify-content: center;
+    column-gap: 0.5rem;
+    margin-bottom: 4rem;
+}
+
+.hero-btn-container button {
+    font: var(--font-semibold) var(--text-lg) var(--font-family);
+}
+
+.hero-image {
+    max-width: 768px;
+    margin: 0 auto 6rem auto;
+}
+
+.hero-social-proof p {
+    font: var(--font-regular) var(--text-md) var(--font-family);
+}
+
+.social-proof-logos {
+    padding: 0 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
