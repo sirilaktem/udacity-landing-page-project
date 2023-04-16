@@ -1,5 +1,5 @@
-/* Mobile Phone */
-@media(max-width: 767px) {
+/* Mobile Devices (Phone & Tablets) */
+@media(max-width: 991px) {
     nav {
         padding: 0 2rem;
     }
@@ -68,6 +68,9 @@
         transform: translateY(-8px) rotate(-45deg);
     }
 }
+
+/* Mobile Phone */
+@media(max-width: 767px) {}
 
 /* Tablet */
 @media(max-width: 991px) and (min-width: 768px) {}
