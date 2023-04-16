@@ -70,4 +70,8 @@ const closeMenu = () => {
 hamburger.addEventListener('click', mobileMenu);
 
 // Close menu after clicking on menu links
-navLink.forEach((n) => n.addEventListener('click', closeMenu));
+navList.addEventListener('click', (e) => {
+    if (e.target && e.target.matches('.nav-link')) {
+        mobileMenu();
+    }
+});
