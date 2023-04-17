@@ -34,6 +34,17 @@ const sections = document.querySelectorAll('section');
  */
 
 /**
+ * Check if the HTML element is visible in the viewport or not
+ *
+ * @param {HTMLElement} ele
+ * @returns {boolean} If returns true, the HTML element is visible in the viewport
+ */
+const isInViewPort = (ele) => {
+    const rect = ele.getBoundingClientRect();
+    return rect.top < window.innerHeight / 2 && rect.bottom >= window.innerHeight / 2;
+};
+
+/**
  * End Helper Functions
  * Begin Main Functions
  *
