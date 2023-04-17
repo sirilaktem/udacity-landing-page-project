@@ -70,6 +70,16 @@ const buildNav = () => {
 };
 
 /**
+ * Scroll to the related section when clicking the menu
+ *
+ * @param {HTMLElement} ele
+ */
+const clickMenuHandler = (ele) => {
+    const sectionId = document.getElementById(ele.getAttribute('aria-controls'));
+    sectionId.scrollIntoView({ behavior: 'smooth' });
+};
+
+/**
  * End Main Functions
  * Begin Events
  *
@@ -85,9 +95,11 @@ buildNav();
 // Toggle active class on hamburger menu
 hamburger.addEventListener('click', mobileMenu);
 
-// Close menu after clicking on menu links
+// Close mobile menu after clicking on menu links and scroll to the proper section
 navList.addEventListener('click', (e) => {
     if (e.target && e.target.matches('.nav-link')) {
+        e.preventDefault();
         closeMenu();
+        clickMenuHandler(e.target);
     }
 });
