@@ -87,11 +87,11 @@ h1 {
 }
 
 h2 {
-    font: var(--font-semibold) var(--display-sm) var(--font-family);
+    font: var(--font-semibold) var(--display-md) var(--font-family);
 }
 
 h3 {
-    font: var(--font-semibold) var(--display-xs) var(--font-family);
+    font: var(--font-semibold) var(--display-sm) var(--font-family);
 }
 
 img {
@@ -120,6 +120,7 @@ section {
     margin: 0 auto;
     width: 100%;
     max-width: 1280px;
+    padding: 0 2rem;
 }
 
 .row {
@@ -131,6 +132,10 @@ section {
 
 .text-center {
     text-align: center;
+}
+
+.p-0 {
+    padding: 0;
 }
 
 .p-1 {
@@ -299,8 +304,9 @@ nav {
     position: fixed;
     width: 100%;
     background: var(--gray-50);
-    padding: 1.5rem 2rem;
+    padding: 0 2rem;
     border-bottom: 1px solid var(--gray-100);
+    z-index: 1;
 }
 
 nav .container {
@@ -389,7 +395,6 @@ footer .container {
 }
 
 .social {
-    width: 40%;
     display: flex;
     justify-content: flex-end;
 }
