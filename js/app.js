@@ -72,6 +72,6 @@ hamburger.addEventListener('click', mobileMenu);
 // Close menu after clicking on menu links
 navList.addEventListener('click', (e) => {
     if (e.target && e.target.matches('.nav-link')) {
-        mobileMenu();
+        closeMenu();
     }
 });
