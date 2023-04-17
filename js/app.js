@@ -91,6 +91,22 @@ const clickMenuHandler = (ele) => {
 };
 
 /**
+ * Add active classes to section and menu when the section is visible in the viewport
+ */
+const scrollHandler = () => {
+    sections.forEach((ele) => {
+        const sectionId = ele.id;
+        if (isInViewPort(ele)) {
+            ele.classList.add('active');
+            document.querySelector('[aria-controls="' + sectionId + '"').classList.add('active');
+        } else {
+            ele.classList.remove('active');
+            document.querySelector('[aria-controls="' + sectionId + '"').classList.remove('active');
+        }
+    });
+};
+
+/**
  * End Main Functions
  * Begin Events
  *
@@ -110,3 +126,6 @@ navList.addEventListener('click', (e) => {
         clickMenuHandler(e.target);
     }
 });
+
+// Set section and menu as active based on scrolling
+window.addEventListener('scroll', scrollHandler);
