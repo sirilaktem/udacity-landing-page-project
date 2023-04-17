@@ -213,3 +213,45 @@ h3 {
 .free-trial-action button {
     margin-bottom: 1rem;
 }
+
+/* Testimonials Section */
+#section4 .section-header {
+    max-width: 100%;
+}
+
+.quote {
+    font: var(--font-medium) var(--display-lg) var(--font-family);
+    color: var(--gray-900);
+    padding: 2rem 0;
+}
+
+.quote::before {
+    content: '“';
+}
+
+.quote::after {
+    content: '”';
+}
+
+.author-img {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: #000;
+    margin: 0 auto;
+}
+
+.author-name {
+    font: var(--font-semibold) var(--text-lg) var(--font-family);
+    color: var(--gray-900);
+}
+
+.author-info {
+    font: var(--font-regular) var(--text-md) var(--font-family);
+}
+
+.author-desc {
+    font: var(--font-regular) var(--text-sm) var(--font-family);
+    max-width: 768px;
+    margin: 0 auto 4rem auto;
+}

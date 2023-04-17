@@ -1,7 +1,7 @@
 /* Mobile Devices (Phone & Tablets) */
 @media(max-width: 991px) {
     nav {
-        padding: 0 2rem;
+        padding: 0;
     }
 
     .nav-logo {
