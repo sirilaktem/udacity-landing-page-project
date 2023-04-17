@@ -382,11 +382,55 @@ nav .container {
 
 /* Footer */
 footer {
-    background: var(--gray-50);
+    border-top: 1px solid var(--gray-100);
 }
 
 footer .container {
     justify-content: space-between;
+}
+
+.bottom-nav {
+    column-gap: 1rem;
+    align-items: flex-start;
+}
+
+.about-company {
+    width: 25%;
+}
+
+.about-text {
+    margin-top: 2rem;
+    font: var(--font-regular) var(--text-md) var(--font-family);
+}
+
+.nav-container {
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.bottom-nav-group-title {
+    font: var(--font-semibold) var(--text-sm) var(--font-family);
+    color: var(--gray-400);
+    padding: 0.5rem 0;
+}
+
+.bottom-nav-list {
+    list-style: none;
+    text-decoration: none;
+}
+
+.bottom-nav-link {
+    display: block;
+    font: var(--font-semibold) var(--text-md) var(--font-family);
+    color: var(--gray-500);
+    padding: 0.5rem 0;
+    text-decoration: none;
+}
+
+.bottom-nav-link:hover {
+    color: var(--primary-700);
 }
 
 .copyright {

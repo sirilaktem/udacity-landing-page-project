@@ -93,6 +93,23 @@
         width: 100%;
     }
 
+    .bottom-nav {
+        flex-direction: column;
+    }
+
+    .about-company {
+        width: 100%;
+        text-align: center;
+    }
+
+    .footer-logo img {
+        margin: 0 auto;
+    }
+
+    .nav-container {
+        width: 100%;
+    }
+
 }
 
 /* Mobile Phone */
@@ -168,6 +185,14 @@
         border-bottom: 1px solid var(--gray-200);
         border-left: 0;
         border-right: 0;
+    }
+
+    /* Bottom Nav */
+    .nav-container {
+        flex-wrap: wrap;
+        column-gap: 5rem;
+        row-gap: 2rem;
+        justify-content: flex-start;
     }
 
 }
