@@ -70,7 +70,7 @@ h3 {
     margin: 0 auto 4rem auto;
 }
 
-.feature {
+.feature:not(:last-child) {
     margin-bottom: 4rem;
 }
 
@@ -130,4 +130,20 @@ h3 {
 
 .feature-image .img-full {
     display: none;
+}
+
+/* Integrations Section*/
+.integration-header {
+    max-width: 768px;
+    text-align: center;
+    margin: 4rem auto;
+}
+
+.integration-logos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    margin: 1.5rem auto 4rem auto;
 }

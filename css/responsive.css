@@ -68,6 +68,7 @@
     .hamburger.active .bar:nth-child(3) {
         transform: translateY(-8px) rotate(-45deg);
     }
+
 }
 
 /* Mobile Phone */
@@ -119,6 +120,11 @@
     .feature-image .img-full {
         display: block;
     }
+
+    /* Integrations Section */
+    .integration-logos {
+        gap: 0.5rem;
+    }
 }
 
 /* Tablet */
@@ -138,5 +144,4 @@
         margin: 0 auto;
     }
 
-    /* Features Section */
 }
