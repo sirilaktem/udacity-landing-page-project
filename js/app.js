@@ -26,6 +26,8 @@ const navBar = document.querySelector('.navbar');
 const hamburger = document.querySelector('.hamburger');
 const navList = document.querySelector('.nav-list');
 const sections = document.querySelectorAll('section');
+const toTopButton = document.getElementById('scroll-to-top');
+const mainHero = document.querySelector('.main-hero');
 
 /**
  * End Global Variables
@@ -49,6 +51,17 @@ const isInViewPort = (ele) => {
  */
 const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
+};
+
+/**
+ * Show/Hide scroll to top button
+ */
+const toggleToTopBtn = () => {
+    if (!isInViewPort(mainHero)) {
+        toTopButton.style.display = 'block';
+    } else {
+        toTopButton.style.display = 'none';
+    }
 };
 
 /**
@@ -115,6 +128,7 @@ const scrollHandler = () => {
             document.querySelector('[aria-controls="' + sectionId + '"').classList.remove('active');
         }
     });
+    toggleToTopBtn();
 };
 
 /**
@@ -140,3 +154,6 @@ navBar.addEventListener('click', (e) => {
 
 // Set section and menu as active based on scrolling
 window.addEventListener('scroll', scrollHandler);
+
+// Click scroll to top button
+toTopButton.addEventListener('click', scrollToTop);

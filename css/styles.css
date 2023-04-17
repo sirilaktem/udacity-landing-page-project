@@ -293,3 +293,23 @@ h3 {
     align-items: flex-end;
     width: 50%;
 }
+
+/* Scroll to Top Button */
+#scroll-to-top {
+    display: none;
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    z-index: 99;
+    border: none;
+    outline: none;
+    background-color: var(--primary-700);
+    color: #fff;
+    padding: 1rem;
+    border-radius: 10px;
+    font-size: 1.5rem;
+}
+
+#scroll-to-top:hover {
+    background-color: var(--gray-500);
+}
