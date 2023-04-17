@@ -24,7 +24,6 @@
  */
 const hamburger = document.querySelector('.hamburger');
 const navList = document.querySelector('.nav-list');
-const navLink = document.querySelectorAll('.nav-link');
 const sections = document.querySelectorAll('section');
 
 /**
