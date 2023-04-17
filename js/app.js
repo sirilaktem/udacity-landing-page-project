@@ -22,6 +22,7 @@
  * Define Global Variables
  *
  */
+const navBar = document.querySelector('.navbar');
 const hamburger = document.querySelector('.hamburger');
 const navList = document.querySelector('.nav-list');
 const sections = document.querySelectorAll('section');
@@ -41,6 +42,13 @@ const sections = document.querySelectorAll('section');
 const isInViewPort = (ele) => {
     const rect = ele.getBoundingClientRect();
     return rect.top < window.innerHeight / 2 && rect.bottom >= window.innerHeight / 2;
+};
+
+/**
+ * Scroll to the top of the page
+ */
+const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
 };
 
 /**
@@ -85,8 +93,12 @@ const buildNav = () => {
  * @param {HTMLElement} ele
  */
 const clickMenuHandler = (ele) => {
-    const sectionId = document.getElementById(ele.getAttribute('aria-controls'));
-    sectionId.scrollIntoView({ behavior: 'smooth' });
+    if (ele.classList.contains('nav-logo-img')) {
+        scrollToTop();
+    } else {
+        const sectionId = document.getElementById(ele.getAttribute('aria-controls'));
+        sectionId.scrollIntoView({ behavior: 'smooth' });
+    }
 };
 
 /**
@@ -118,8 +130,8 @@ buildNav();
 hamburger.addEventListener('click', mobileMenu);
 
 // Close mobile menu after clicking on menu links and scroll to the proper section
-navList.addEventListener('click', (e) => {
-    if (e.target && e.target.matches('.nav-link')) {
+navBar.addEventListener('click', (e) => {
+    if (e.target && (e.target.matches('.nav-link') || e.target.matches('.nav-logo-img'))) {
         e.preventDefault();
         closeMenu();
         clickMenuHandler(e.target);
