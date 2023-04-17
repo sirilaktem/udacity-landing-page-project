@@ -69,8 +69,28 @@
         transform: translateY(-8px) rotate(-45deg);
     }
 
+    .free-trial-box {
+        flex-direction: column;
+        row-gap: 1rem;
+    }
+
+    .free-trial-action,
+    .free-trial-action button {
+        width: 100%;
+    }
+
+    .free-trial-box,
+    .free-trial-action {
+        flex-direction: column;
+    }
+
     #section5 {
         padding: 4rem 0;
+    }
+
+    .get-started-action {
+        flex-direction: column;
+        width: 100%;
     }
 
 }
@@ -150,21 +170,6 @@
         border-right: 0;
     }
 
-    .free-trial-box {
-        flex-direction: column;
-        row-gap: 1rem;
-    }
-
-    .free-trial-action,
-    .free-trial-action button {
-        width: 100%;
-    }
-
-    /* Get Started Section */
-    .get-started-action {
-        flex-direction: column;
-        width: 100%;
-    }
 }
 
 /* Tablet */

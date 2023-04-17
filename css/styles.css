@@ -198,6 +198,7 @@ h3 {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+    column-gap: 1rem;
 }
 
 .free-trial-title {
@@ -213,6 +214,10 @@ h3 {
 
 .free-trial-action {
     text-align: right;
+    display: flex;
+    justify-content: flex-end;
+    column-gap: 1rem;
+    min-width: 35%;
 }
 
 .free-trial-action button {
