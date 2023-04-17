@@ -25,6 +25,7 @@
 const hamburger = document.querySelector('.hamburger');
 const navList = document.querySelector('.nav-list');
 const navLink = document.querySelectorAll('.nav-link');
+const sections = document.querySelectorAll('section');
 
 /**
  * End Global Variables
@@ -55,12 +56,27 @@ const closeMenu = () => {
 };
 
 /**
+ * Build the top navigation from each section of the landing page
+ */
+const buildNav = () => {
+    sections.forEach((ele) => {
+        const navItemTarget = ele.getAttribute('id');
+        const navItemText = ele.getAttribute('data-nav');
+        const navItem = document.createElement('li');
+        navItem.className = 'nav-item';
+        navItem.innerHTML = `<a class="nav-link" aria-controls="${navItemTarget}" href="#">${navItemText}</a>`;
+        navList.appendChild(navItem);
+    });
+};
+
+/**
  * End Main Functions
  * Begin Events
  *
  */
 
 // Build menu
+buildNav();
 
 // Scroll to section on link click
 
