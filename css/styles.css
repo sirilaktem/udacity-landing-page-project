@@ -18,10 +18,20 @@ h3 {
     max-width: 768px;
 }
 
+.section-header {
+    max-width: 768px;
+    text-align: center;
+    margin: 4rem auto;
+}
+
 .section-name {
     font: var(--font-semibold) var(--text-md) var(--font-family);
     color: var(--primary-700);
     text-align: center;
+}
+
+.section-icon {
+    margin: 2rem auto 0 auto;
 }
 
 /* Hero section*/
@@ -133,12 +143,6 @@ h3 {
 }
 
 /* Integrations Section*/
-.integration-header {
-    max-width: 768px;
-    text-align: center;
-    margin: 4rem auto;
-}
-
 .integration-logos {
     display: flex;
     flex-wrap: wrap;
@@ -146,4 +150,66 @@ h3 {
     align-items: center;
     gap: 1rem;
     margin: 4rem auto 4rem auto;
+}
+
+/* Benefits Section */
+.benefits-stats {
+    margin: 0 auto;
+    max-width: 768px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.stat-box {
+    width: 33%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.stat-box:nth-child(2) {
+    border-left: 1px solid var(--gray-200);
+    border-right: 1px solid var(--gray-200);
+}
+
+.stat-num {
+    font: var(--font-semibold) var(--display-xl) var(--font-family);
+    color: var(--primary-600);
+}
+
+.stat-desc {
+    font: var(--font-medium) var(--text-lg) var(--font-family);
+    color: var(--gray-900);
+}
+
+.free-trial-box {
+    margin: 6rem 0;
+    padding: 4rem;
+    border-radius: 1rem;
+    background: var(--primary-50);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.free-trial-title {
+    font: var(--font-semibold) var(--display-sm) var(--font-family);
+    color: var(--primary-900);
+    margin-bottom: 1rem;
+}
+
+.free-trial-desc {
+    font: var(--font-regular) var(--text-xl) var(--font-family);
+    color: var(--primary-700);
+}
+
+.free-trial-action {
+    text-align: right;
+}
+
+.free-trial-action button {
+    margin-bottom: 1rem;
 }
