@@ -88,10 +88,6 @@ const clickMenuHandler = (ele) => {
 // Build menu
 buildNav();
 
-// Scroll to section on link click
-
-// Set sections as active
-
 // Toggle active class on hamburger menu
 hamburger.addEventListener('click', mobileMenu);
 
