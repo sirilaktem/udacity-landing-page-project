@@ -165,7 +165,6 @@ window.addEventListener(
         }
         // Hide navbar while not scrolling except when staying on top of the page
         timer = setTimeout(function () {
-            // do something
             if (!isInViewPort(mainHero)) {
                 navBar.classList.add('hide');
             }
