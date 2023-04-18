@@ -334,40 +334,50 @@ h3 {
     display: none;
 }
 
-.main-hero.active::before,
-section.active::before {
+.main-hero::before,
+section::before {
     position: absolute;
     content: "";
     right: 1%;
     top: 1%;
     width: 400px;
     height: 400px;
-    background: var(--primary-500);
+    background: none;
     border-radius: 62% 47% 82% 35% / 45% 45% 80% 66%;
     will-change: border-radius, transform, opacity;
     animation: sliderShape 5s linear infinite;
     display: block;
     z-index: -1;
     -webkit-animation: sliderShape 5s linear infinite;
-    transition: all 0.5s;
+    transition: all 1s;
 }
 
-.main-hero.active::after,
-section.active::after {
+.main-hero.active::before,
+section.active::before {
+    background: var(--primary-500);
+}
+
+.main-hero::after,
+section::after {
     position: absolute;
     content: "";
     left: 0;
     top: 60%;
     width: 200px;
     height: 200px;
-    background: var(--primary-500);
+    background: none;
     border-radius: 62% 47% 82% 35% / 45% 45% 80% 66%;
     will-change: border-radius, transform, opacity;
     animation: sliderShape 5s linear infinite;
     display: block;
     z-index: -1;
     -webkit-animation: sliderShape 5s linear infinite;
-    transition: all 0.5s;
+    transition: all 1s;
+}
+
+.main-hero.active::after,
+section.active::after {
+    background: var(--primary-500);
 }
 
 @keyframes sliderShape {
