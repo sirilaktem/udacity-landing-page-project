@@ -12,6 +12,20 @@ h3 {
     padding: 1rem 0;
 }
 
+.main-hero,
+#section2,
+#section4 {
+    background: var(--gray-alpha);
+    position: relative;
+}
+
+#section1,
+#section3,
+#section5 {
+    background: var(--white-alpha);
+    position: relative;
+}
+
 .support-text {
     margin: 1.5rem auto 2.5rem auto;
     font: var(--font-regular) var(--text-xl) var(--font-family);
@@ -35,10 +49,6 @@ h3 {
 }
 
 /* Hero section*/
-.main-hero {
-    background: var(--gray-50);
-}
-
 .main-hero .container {
     display: flex;
     flex-direction: column;
@@ -85,6 +95,7 @@ h3 {
 }
 
 .feature-wrap {
+    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -129,7 +140,6 @@ h3 {
 .get-started-image .img-right,
 .get-started-image .img-left {
     position: absolute;
-    max-height: 50%;
     max-width: 45%;
 }
 
@@ -322,4 +332,63 @@ h3 {
 
 .navbar.hide {
     display: none;
+}
+
+.main-hero.active::before,
+section.active::before {
+    position: absolute;
+    content: "";
+    right: 1%;
+    top: 1%;
+    width: 400px;
+    height: 400px;
+    background: var(--primary-500);
+    border-radius: 62% 47% 82% 35% / 45% 45% 80% 66%;
+    will-change: border-radius, transform, opacity;
+    animation: sliderShape 5s linear infinite;
+    display: block;
+    z-index: -1;
+    -webkit-animation: sliderShape 5s linear infinite;
+    transition: all 0.5s;
+}
+
+.main-hero.active::after,
+section.active::after {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 60%;
+    width: 200px;
+    height: 200px;
+    background: var(--primary-500);
+    border-radius: 62% 47% 82% 35% / 45% 45% 80% 66%;
+    will-change: border-radius, transform, opacity;
+    animation: sliderShape 5s linear infinite;
+    display: block;
+    z-index: -1;
+    -webkit-animation: sliderShape 5s linear infinite;
+    transition: all 0.5s;
+}
+
+@keyframes sliderShape {
+
+    0%,
+    100% {
+        border-radius: 42% 58% 70% 30% / 45% 45% 55% 55%;
+        transform: translate3d(0, 0, 0) rotateZ(0.01deg);
+    }
+
+    34% {
+        border-radius: 70% 30% 46% 54% / 30% 29% 71% 70%;
+        transform: translate3d(0, 5px, 0) rotateZ(0.01deg);
+    }
+
+    50% {
+        transform: translate3d(0, 0, 0) rotateZ(0.01deg);
+    }
+
+    67% {
+        border-radius: 100% 60% 60% 100% / 100% 100% 60% 60%;
+        transform: translate3d(0, -3px, 0) rotateZ(0.01deg);
+    }
 }

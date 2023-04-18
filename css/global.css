@@ -21,6 +21,8 @@
     --primary-700: #6941c6;
     --primary-800: #53389e;
     --primary-900: #42307d;
+    --gray-alpha: rgba(208, 213, 221, 0.6);
+    --white-alpha: rgba(255, 255, 255, 0.6);
     --font-family: "Inter", arial, sans-serif;
     --font-regular: 400;
     --font-medium: 500;
