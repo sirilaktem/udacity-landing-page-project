@@ -29,6 +29,7 @@ const mainHero = document.querySelector('.main-hero');
 const sections = document.querySelectorAll('section');
 const toTopButton = document.getElementById('scroll-to-top');
 let isScrolling = false;
+let timer = null;
 
 /**
  * End Global Variables
@@ -155,21 +156,26 @@ navBar.addEventListener('click', (e) => {
 });
 
 // Set section and menu as active based on scrolling
-window.addEventListener('scroll', () => {
-    scrollHandler();
-});
+window.addEventListener(
+    'scroll',
+    () => {
+        if (timer !== null) {
+            clearTimeout(timer);
+            scrollHandler();
+        }
+        // Hide navbar while not scrolling except when staying on top of the page
+        timer = setTimeout(function () {
+            // do something
+            if (!isInViewPort(mainHero)) {
+                navBar.classList.add('hide');
+            }
+        }, 3000);
+    },
+    false
+);
 
 // Click scroll to top button
 toTopButton.addEventListener('click', scrollToTop);
 
 // Recheck show/hide scroll to top button when resizing window
 window.addEventListener('resize', toggleToTopBtn);
-
-// Hide navbar while not scrolling except when staying on top of the page
-window.onscroll = () => (isScrolling = true);
-setInterval(() => {
-    if (isScrolling && !isInViewPort(mainHero)) {
-        isScrolling = false;
-        navBar.classList.add('hide');
-    }
-}, 3000);
