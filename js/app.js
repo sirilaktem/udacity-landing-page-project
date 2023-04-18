@@ -120,11 +120,15 @@ const clickMenuHandler = (ele) => {
  */
 const scrollHandler = () => {
     navBar.classList.remove('hide');
+    if (isInViewPort(mainHero)) {
+        mainHero.classList.add('active');
+    }
     sections.forEach((ele) => {
         const sectionId = ele.id;
         if (isInViewPort(ele)) {
             ele.classList.add('active');
             document.querySelector('[aria-controls="' + sectionId + '"').classList.add('active');
+            mainHero.classList.remove('active');
         } else {
             ele.classList.remove('active');
             document.querySelector('[aria-controls="' + sectionId + '"').classList.remove('active');
