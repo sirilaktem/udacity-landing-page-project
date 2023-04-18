@@ -27,7 +27,6 @@ const hamburger = document.querySelector('.hamburger');
 const navList = document.querySelector('.nav-list');
 const sections = document.querySelectorAll('section');
 const toTopButton = document.getElementById('scroll-to-top');
-const mainHero = document.querySelector('.main-hero');
 
 /**
  * End Global Variables
@@ -57,7 +56,7 @@ const scrollToTop = () => {
  * Show/Hide scroll to top button
  */
 const toggleToTopBtn = () => {
-    if (!isInViewPort(mainHero)) {
+    if (document.documentElement.scrollTop > document.documentElement.clientHeight) {
         toTopButton.style.display = 'block';
     } else {
         toTopButton.style.display = 'none';
@@ -157,3 +156,6 @@ window.addEventListener('scroll', scrollHandler);
 
 // Click scroll to top button
 toTopButton.addEventListener('click', scrollToTop);
+
+// Recheck show/hide scroll to top button when resizing window
+window.addEventListener('resize', toggleToTopBtn);
