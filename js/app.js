@@ -28,7 +28,6 @@ const navList = document.querySelector('.nav-list');
 const mainHero = document.querySelector('.main-hero');
 const sections = document.querySelectorAll('section');
 const toTopButton = document.getElementById('scroll-to-top');
-let isScrolling = false;
 let timer = null;
 
 /**
