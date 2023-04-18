@@ -172,4 +172,4 @@ setInterval(() => {
         isScrolling = false;
         navBar.classList.add('hide');
     }
-}, 5000);
+}, 3000);

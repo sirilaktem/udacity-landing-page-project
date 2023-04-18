@@ -317,7 +317,7 @@ h3 {
 /* Show/Hide navbar */
 .navbar {
     display: block;
-    transition: display 5s;
+    transition: display 3s;
 }
 
 .navbar.hide {
