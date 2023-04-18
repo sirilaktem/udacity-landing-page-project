@@ -178,3 +178,14 @@ toTopButton.addEventListener('click', scrollToTop);
 
 // Recheck show/hide scroll to top button when resizing window
 window.addEventListener('resize', toggleToTopBtn);
+
+// Show navbar when moving mouse to the top of the screen
+document.body.addEventListener(
+    'mousemove',
+    (e) => {
+        if (e.clientY < 100) {
+            navBar.classList.remove('hide');
+        }
+    },
+    false
+);
