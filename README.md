@@ -15,7 +15,7 @@ You can see the [project demo](https://sirilaktem.github.io/udacity-landing-page
 
 # Table of Contents
 
-* [Landing Page Project](#project-title)
+* [Landing Page Project](#landing-page-project)
 * [Demo](#demo)
 * [Table of Contents](#table-of-contents)
 * [Installation](#installation)
