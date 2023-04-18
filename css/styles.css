@@ -313,3 +313,13 @@ h3 {
 #scroll-to-top:hover {
     background-color: var(--gray-500);
 }
+
+/* Show/Hide navbar */
+.navbar {
+    display: block;
+    transition: display 5s;
+}
+
+.navbar.hide {
+    display: none;
+}

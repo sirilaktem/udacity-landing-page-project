@@ -25,8 +25,10 @@
 const navBar = document.querySelector('.navbar');
 const hamburger = document.querySelector('.hamburger');
 const navList = document.querySelector('.nav-list');
+const mainHero = document.querySelector('.main-hero');
 const sections = document.querySelectorAll('section');
 const toTopButton = document.getElementById('scroll-to-top');
+let isScrolling = false;
 
 /**
  * End Global Variables
@@ -117,6 +119,7 @@ const clickMenuHandler = (ele) => {
  * Add active classes to section and menu when the section is visible in the viewport
  */
 const scrollHandler = () => {
+    navBar.classList.remove('hide');
     sections.forEach((ele) => {
         const sectionId = ele.id;
         if (isInViewPort(ele)) {
@@ -152,10 +155,21 @@ navBar.addEventListener('click', (e) => {
 });
 
 // Set section and menu as active based on scrolling
-window.addEventListener('scroll', scrollHandler);
+window.addEventListener('scroll', () => {
+    scrollHandler();
+});
 
 // Click scroll to top button
 toTopButton.addEventListener('click', scrollToTop);
 
 // Recheck show/hide scroll to top button when resizing window
 window.addEventListener('resize', toggleToTopBtn);
+
+// Hide navbar while not scrolling except when staying on top of the page
+window.onscroll = () => (isScrolling = true);
+setInterval(() => {
+    if (isScrolling && !isInViewPort(mainHero)) {
+        isScrolling = false;
+        navBar.classList.add('hide');
+    }
+}, 5000);
